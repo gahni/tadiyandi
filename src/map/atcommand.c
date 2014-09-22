@@ -998,7 +998,7 @@ ACMD_FUNC(jobchange)
  *------------------------------------------*/
 ACMD_FUNC(kill)
 {
-	//
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	status_kill(&sd->bl);
 	clif_displaymessage(sd->fd, msg_txt(sd,13)); // A pity! You've died.
