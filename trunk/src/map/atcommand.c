@@ -141,9 +141,10 @@ static const char* atcommand_help_string(const char* command)
  *------------------------------------------*/
 ACMD_FUNC(send)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	
 	int len=0,off,end,type;
 	long num;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	// read message type as hex number (without the 0x)
 	if(!message || !*message ||
@@ -728,8 +729,8 @@ ACMD_FUNC(whogm)
  *------------------------------------------*/
 ACMD_FUNC(save)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	pc_setsavepoint(sd, sd->mapindex, sd->bl.x, sd->bl.y);
 	if (sd->status.pet_id > 0 && sd->pd)
@@ -853,8 +854,8 @@ ACMD_FUNC(guildstorage)
  *------------------------------------------*/
 ACMD_FUNC(option)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int param1 = 0, param2 = 0, param3 = 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!message || !*message || sscanf(message, "%d %d %d", &param1, &param2, &param3) < 1 || param1 < 0 || param2 < 0 || param3 < 0)
@@ -931,9 +932,9 @@ ACMD_FUNC(hide)
  *------------------------------------------*/
 ACMD_FUNC(jobchange)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int job = 0, upper = 0;
 	const char* text;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
     if (!message || !*message || sscanf(message, "%d %d", &job, &upper) < 1) {
@@ -997,7 +998,7 @@ ACMD_FUNC(jobchange)
  *------------------------------------------*/
 ACMD_FUNC(kill)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	//
 	nullpo_retr(-1, sd);
 	status_kill(&sd->bl);
 	clif_displaymessage(sd->fd, msg_txt(sd,13)); // A pity! You've died.
@@ -1122,12 +1123,12 @@ ACMD_FUNC(heal)
  *------------------------------------------*/
 ACMD_FUNC(item)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char item_name[100];
 	int number = 0, item_id, flag = 0, bound = 0;
 	struct item item_tmp;
 	struct item_data *item_data;
 	int get_count, i;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(item_name, '\0', sizeof(item_name));
@@ -1190,13 +1191,13 @@ ACMD_FUNC(item)
  *------------------------------------------*/
 ACMD_FUNC(item2)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct item item_tmp;
 	struct item_data *item_data;
 	char item_name[100];
 	int item_id, number = 0, bound = 0;
 	int identify = 0, refine = 0, attr = 0;
 	int c1 = 0, c2 = 0, c3 = 0, c4 = 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(item_name, '\0', sizeof(item_name));
@@ -1280,8 +1281,8 @@ ACMD_FUNC(item2)
  *------------------------------------------*/
 ACMD_FUNC(itemreset)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int i;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	for (i = 0; i < MAX_INVENTORY; i++) {
@@ -1506,7 +1507,7 @@ static int atcommand_pvpoff_sub(struct block_list *bl,va_list ap)
 
 ACMD_FUNC(pvpoff)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
+	//
 	nullpo_retr(-1, sd);
 
 	if (!map[sd->bl.m].flag.pvp) {
@@ -1545,7 +1546,7 @@ static int atcommand_pvpon_sub(struct block_list *bl,va_list ap)
 
 ACMD_FUNC(pvpon)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
 	nullpo_retr(-1, sd);
 
 	if (map[sd->bl.m].flag.pvp) {
@@ -1571,7 +1572,7 @@ ACMD_FUNC(pvpon)
  *------------------------------------------*/
 ACMD_FUNC(gvgoff)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!map[sd->bl.m].flag.gvg) {
@@ -1593,7 +1594,7 @@ ACMD_FUNC(gvgoff)
  *------------------------------------------*/
 ACMD_FUNC(gvgon)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (map[sd->bl.m].flag.gvg) {
@@ -1927,7 +1928,6 @@ ACMD_FUNC(go)
  *------------------------------------------*/
 ACMD_FUNC(monster)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char name[NAME_LENGTH];
 	char monster[NAME_LENGTH];
 	char eventname[EVENT_NAME_LENGTH] = "";
@@ -1937,6 +1937,7 @@ ACMD_FUNC(monster)
 	int i, k, range;
 	short mx, my;
 	unsigned int size;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(name, '\0', sizeof(name));
@@ -2043,9 +2044,9 @@ static int atkillmonster_sub(struct block_list *bl, va_list ap)
 
 ACMD_FUNC(killmonster)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int map_id, drop_flag;
 	char map_name[MAP_NAME_LENGTH_EXT];
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(map_name, '\0', sizeof(map_name));
@@ -2071,9 +2072,9 @@ ACMD_FUNC(killmonster)
  *------------------------------------------*/
 ACMD_FUNC(refine)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int i,j, position = 0, refine = 0, current_position, final_refine;
 	int count;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(atcmd_output, '\0', sizeof(atcmd_output));
@@ -2151,11 +2152,11 @@ ACMD_FUNC(refine)
  *------------------------------------------*/
 ACMD_FUNC(produce)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char item_name[100];
 	int item_id, attribute = 0, star = 0;
 	struct item_data *item_data;
 	struct item tmp_item;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(atcmd_output, '\0', sizeof(atcmd_output));
@@ -2272,8 +2273,8 @@ ACMD_FUNC(gat)
  *------------------------------------------*/
 ACMD_FUNC(displaystatus)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int i, type, flag, tick, val1 = 0, val2 = 0, val3 = 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!message || !*message || (i = sscanf(message, "%d %d %d %d %d %d", &type, &flag, &tick, &val1, &val2, &val3)) < 1) {
@@ -2293,9 +2294,9 @@ ACMD_FUNC(displaystatus)
  *------------------------------------------*/
 ACMD_FUNC(statuspoint)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int point;
 	unsigned int new_status_point;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	if (!message || !*message || (point = atoi(message)) == 0) {
 		clif_displaymessage(fd, msg_txt(sd,1010)); // Please enter a number (usage: @stpoint <number of points>).
@@ -2391,8 +2392,8 @@ ACMD_FUNC(skillpoint)
  *------------------------------------------*/
 ACMD_FUNC(zeny)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int zeny=0, ret=-1;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!message || !*message || (zeny = atoi(message)) == 0) {
@@ -2418,10 +2419,10 @@ ACMD_FUNC(zeny)
  *------------------------------------------*/
 ACMD_FUNC(param)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int i, value = 0, new_value, max;
 	const char* param[] = { "str", "agi", "vit", "int", "dex", "luk" };
 	short* status[6];
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
  	//we don't use direct initialization because it isn't part of the c standard.
 	nullpo_retr(-1, sd);
 
@@ -2481,9 +2482,9 @@ ACMD_FUNC(param)
  *------------------------------------------*/
 ACMD_FUNC(stat_all)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int index, count, value, max, new_value;
 	short* status[6];
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
  	//we don't use direct initialization because it isn't part of the c standard.
 	nullpo_retr(-1, sd);
 
@@ -2775,7 +2776,7 @@ ACMD_FUNC(recall) {
  *------------------------------------------*/
 ACMD_FUNC(char_block)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(atcmd_player_name, '\0', sizeof(atcmd_player_name));
@@ -2808,11 +2809,11 @@ ACMD_FUNC(char_block)
  *------------------------------------------*/
 ACMD_FUNC(char_ban)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char * modif_p;
 	int year, month, day, hour, minute, second, value;
 	time_t timestamp;
 	struct tm *tmtime;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(atcmd_output, '\0', sizeof(atcmd_output));
@@ -2894,7 +2895,7 @@ ACMD_FUNC(char_ban)
  *------------------------------------------*/
 ACMD_FUNC(char_unblock)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(atcmd_player_name, '\0', sizeof(atcmd_player_name));
@@ -2916,7 +2917,7 @@ ACMD_FUNC(char_unblock)
  *------------------------------------------*/
 ACMD_FUNC(char_unban)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(atcmd_player_name, '\0', sizeof(atcmd_player_name));
@@ -2972,9 +2973,9 @@ ACMD_FUNC(day)
  *------------------------------------------*/
 ACMD_FUNC(doom)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct map_session_data* pl_sd;
 	struct s_mapiterator* iter;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	nullpo_retr(-1, sd);
 
@@ -3000,9 +3001,9 @@ ACMD_FUNC(doom)
  *------------------------------------------*/
 ACMD_FUNC(doommap)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct map_session_data* pl_sd;
 	struct s_mapiterator* iter;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	nullpo_retr(-1, sd);
 
@@ -3113,10 +3114,10 @@ ACMD_FUNC(kick)
  *------------------------------------------*/
 ACMD_FUNC(kickall)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct map_session_data* pl_sd;
 	struct s_mapiterator* iter;
 	nullpo_retr(-1, sd);
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	iter = mapit_getallusers();
 	for( pl_sd = (TBL_PC*)mapit_first(iter); mapit_exists(iter); pl_sd = (TBL_PC*)mapit_next(iter) )
@@ -3152,10 +3153,10 @@ ACMD_FUNC(allskill)
  *------------------------------------------*/
 ACMD_FUNC(questskill)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	uint16 skill_id;
 	nullpo_retr(-1, sd);
 
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	if (!message || !*message || (skill_id = atoi(message)) <= 0)
 	{// also send a list of skills applicable to this command
 		const char* text;
@@ -3197,10 +3198,10 @@ ACMD_FUNC(questskill)
  *------------------------------------------*/
 ACMD_FUNC(lostskill)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	uint16 skill_id;
 	nullpo_retr(-1, sd);
 
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	if (!message || !*message || (skill_id = atoi(message)) <= 0)
 	{// also send a list of skills applicable to this command
 		const char* text;
@@ -3244,9 +3245,9 @@ ACMD_FUNC(lostskill)
  *------------------------------------------*/
 ACMD_FUNC(spiritball)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int max_spiritballs;
 	int number;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	max_spiritballs = min(ARRAYLENGTH(sd->spirit_timer), 0x7FFF);
@@ -3348,7 +3349,7 @@ ACMD_FUNC(breakguild)
  *------------------------------------------*/
 ACMD_FUNC(agitstart)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	if (agit_flag == 1) {
 		clif_displaymessage(fd, msg_txt(sd,73)); // War of Emperium is currently in progress.
@@ -3367,7 +3368,7 @@ ACMD_FUNC(agitstart)
  *------------------------------------------*/
 ACMD_FUNC(agitstart2)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	if (agit2_flag == 1) {
 		clif_displaymessage(fd, msg_txt(sd,404)); // "War of Emperium SE is currently in progress."
@@ -3386,7 +3387,7 @@ ACMD_FUNC(agitstart2)
  *------------------------------------------*/
 ACMD_FUNC(agitend)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	if (agit_flag == 0) {
 		clif_displaymessage(fd, msg_txt(sd,75)); // War of Emperium is currently not in progress.
@@ -3405,7 +3406,7 @@ ACMD_FUNC(agitend)
  *------------------------------------------*/
 ACMD_FUNC(agitend2)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	if (agit2_flag == 0) {
 		clif_displaymessage(fd, msg_txt(sd,406)); // "War of Emperium SE is currently not in progress."
@@ -3424,7 +3425,7 @@ ACMD_FUNC(agitend2)
  *------------------------------------------*/
 ACMD_FUNC(mapexit)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	do_shutdown();
@@ -3472,10 +3473,10 @@ ACMD_FUNC(idsearch)
  *------------------------------------------*/
 ACMD_FUNC(recallall)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct map_session_data* pl_sd;
 	struct s_mapiterator* iter;
 	int count;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(atcmd_output, '\0', sizeof(atcmd_output));
@@ -3520,12 +3521,12 @@ ACMD_FUNC(recallall)
  *------------------------------------------*/
 ACMD_FUNC(guildrecall)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
 	struct map_session_data* pl_sd;
 	struct s_mapiterator* iter;
 	int count;
 	char guild_name[NAME_LENGTH];
 	struct guild *g;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(guild_name, '\0', sizeof(guild_name));
@@ -3580,12 +3581,12 @@ ACMD_FUNC(guildrecall)
  *------------------------------------------*/
 ACMD_FUNC(partyrecall)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
 	struct map_session_data* pl_sd;
 	struct s_mapiterator* iter;
 	char party_name[NAME_LENGTH];
 	struct party_data *p;
 	int count;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(party_name, '\0', sizeof(party_name));
@@ -3779,9 +3780,8 @@ ACMD_FUNC(reload) {
  * Temporary - Permanent update in inter_athena.conf
  *------------------------------------------*/
 ACMD_FUNC(partysharelvl) {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	unsigned int share_lvl;
-
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if(!message || !*message) {
@@ -4139,10 +4139,10 @@ ACMD_FUNC(mount_peco)
  *------------------------------------------*/
 ACMD_FUNC(guildspy)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char guild_name[NAME_LENGTH];
 	struct guild *g;
 	nullpo_retr(-1, sd);
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	memset(guild_name, '\0', sizeof(guild_name));
 	memset(atcmd_output, '\0', sizeof(atcmd_output));
@@ -4252,9 +4252,9 @@ ACMD_FUNC(repairall)
  *------------------------------------------*/
 ACMD_FUNC(nuke)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct map_session_data *pl_sd;
 	nullpo_retr(-1, sd);
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	memset(atcmd_player_name, '\0', sizeof(atcmd_player_name));
 
@@ -4557,11 +4557,11 @@ static void get_jail_time(int jailtime, int* year, int* month, int* day, int* ho
  *------------------------------------------*/
 ACMD_FUNC(jail)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct map_session_data *pl_sd;
 	int x, y;
 	unsigned short m_index;
 	nullpo_retr(-1, sd);
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	memset(atcmd_player_name, '\0', sizeof(atcmd_player_name));
 
@@ -4987,9 +4987,9 @@ ACMD_FUNC(undisguiseguild)
  *------------------------------------------*/
 ACMD_FUNC(exp)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char output[CHAT_SIZE_MAX];
 	double nextb, nextj;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	memset(output, '\0', sizeof(output));
 
@@ -5089,8 +5089,8 @@ ACMD_FUNC(email)
  *------------------------------------------*/
 ACMD_FUNC(effect)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int type = 0, flag = 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!message || !*message || sscanf(message, "%d", &type) < 1) {
@@ -5145,7 +5145,7 @@ ACMD_FUNC(killable)
  *------------------------------------------*/
 ACMD_FUNC(skillon)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	map[sd->bl.m].flag.noskill = 0;
 	clif_displaymessage(fd, msg_txt(sd,244));
@@ -5158,7 +5158,7 @@ ACMD_FUNC(skillon)
  *------------------------------------------*/
 ACMD_FUNC(skilloff)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	map[sd->bl.m].flag.noskill = 1;
 	clif_displaymessage(fd, msg_txt(sd,243));
@@ -5171,9 +5171,9 @@ ACMD_FUNC(skilloff)
  *------------------------------------------*/
 ACMD_FUNC(npcmove)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int x = 0, y = 0, m;
 	struct npc_data *nd = 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	memset(atcmd_player_name, '\0', sizeof atcmd_player_name);
 
@@ -5210,11 +5210,11 @@ ACMD_FUNC(npcmove)
  *------------------------------------------*/
 ACMD_FUNC(addwarp)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char mapname[32], warpname[NAME_LENGTH+1];
 	int x,y;
 	unsigned short m;
 	struct npc_data* nd;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	nullpo_retr(-1, sd);
 	memset(warpname, '\0', sizeof(warpname));
@@ -5327,8 +5327,8 @@ ACMD_FUNC(storeall)
 
 ACMD_FUNC(clearstorage)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int i, j;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (sd->state.storage_flag == 1) {
@@ -5348,10 +5348,10 @@ ACMD_FUNC(clearstorage)
 
 ACMD_FUNC(cleargstorage)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int i, j;
 	struct guild *g;
 	struct guild_storage *gstorage;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	g = sd->guild;
@@ -5390,8 +5390,8 @@ ACMD_FUNC(cleargstorage)
 
 ACMD_FUNC(clearcart)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int i;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (pc_iscarton(sd) == 0) {
@@ -5421,13 +5421,12 @@ ACMD_FUNC(clearcart)
 #define MAX_SKILLID_PARTIAL_RESULTS 5
 #define MAX_SKILLID_PARTIAL_RESULTS_LEN 74 // "skill " (6) + "%d:" (up to 5) + "%s" (up to 30) + " (%s)" (up to 33)
 ACMD_FUNC(skillid) {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int skillen, idx, i, found = 0;
 	DBIterator* iter;
 	DBKey key;
 	DBData *data;
 	char partials[MAX_SKILLID_PARTIAL_RESULTS][MAX_SKILLID_PARTIAL_RESULTS_LEN];
-
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!message || !*message) {
@@ -5469,12 +5468,12 @@ ACMD_FUNC(skillid) {
  *------------------------------------------*/
 ACMD_FUNC(useskill)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct map_session_data *pl_sd = NULL;
 	struct block_list *bl;
 	uint16 skill_id;
 	uint16 skill_lv;
 	char target[100];
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if(!message || !*message || sscanf(message, "%hu %hu %23[^\n]", &skill_id, &skill_lv, target) != 3) {
@@ -5514,11 +5513,12 @@ ACMD_FUNC(useskill)
  *  three possible skill-effect packets to the area.
  *------------------------------------------*/
 ACMD_FUNC(displayskill)
-{	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+{	
 	struct status_data * status;
 	unsigned int tick;
 	uint16 skill_id;
 	uint16 skill_lv = 1;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!message || !*message || sscanf(message, "%hu %hu", &skill_id, &skill_lv) < 1)
@@ -5540,12 +5540,12 @@ ACMD_FUNC(displayskill)
  *------------------------------------------*/
 ACMD_FUNC(skilltree)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct map_session_data *pl_sd = NULL;
 	uint16 skill_id;
 	int meets, j, c=0;
 	char target[NAME_LENGTH];
 	struct skill_tree_entry *ent;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if(!message || !*message || sscanf(message, "%hu %23[^\r\n]", &skill_id, target) != 2) {
@@ -6214,7 +6214,7 @@ static int atcommand_cleanfloor_sub(struct block_list *bl, va_list ap)
 
 ACMD_FUNC(cleanmap)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	map_foreachinmap(atcommand_cleanfloor_sub, sd->bl.m, BL_ITEM);
 	clif_displaymessage(fd, msg_txt(sd,1221)); // All dropped items have been cleaned up.
 	return 0;
@@ -6222,8 +6222,8 @@ ACMD_FUNC(cleanmap)
 
 ACMD_FUNC(cleanarea)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int x0 = 0, y0 = 0, x1 = 0, y1 = 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	if (!message || !*message || sscanf(message, "%d %d %d %d", &x0, &y0, &x1, &y1) < 1) {
 		map_foreachinarea(atcommand_cleanfloor_sub, sd->bl.m, sd->bl.x - (AREA_SIZE * 2), sd->bl.y - (AREA_SIZE * 2), sd->bl.x + (AREA_SIZE * 2), sd->bl.y + (AREA_SIZE * 2), BL_ITEM);
@@ -6405,12 +6405,12 @@ ACMD_FUNC(reset)
  *------------------------------------------*/
 ACMD_FUNC(summon)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char name[NAME_LENGTH];
 	int mob_id = 0;
 	int duration = 0;
 	struct mob_data *md;
 	unsigned int tick=gettick();
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	nullpo_retr(-1, sd);
 
@@ -6457,8 +6457,8 @@ ACMD_FUNC(summon)
  *------------------------------------------*/
 ACMD_FUNC(adjgroup)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int new_group = 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!message || !*message || sscanf(message, "%d", &new_group) != 1) {
@@ -6508,8 +6508,8 @@ ACMD_FUNC(trade)
  *------------------------------------------*/
 ACMD_FUNC(setbattleflag)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char flag[128], value[128];
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!message || !*message || sscanf(message, "%127s %127s", flag, value) != 2) {
@@ -6744,8 +6744,8 @@ ACMD_FUNC(gmotd)
 
 ACMD_FUNC(misceffect)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int effect = 0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	if (!message || !*message)
 		return -1;
@@ -7195,11 +7195,11 @@ ACMD_FUNC(hominfo)
 
 ACMD_FUNC(homstats)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	struct homun_data *hd;
 	struct s_homunculus_db *db;
 	struct s_homunculus *hom;
 	int lv, min, max, evo;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	nullpo_retr(-1, sd);
 
@@ -7468,9 +7468,10 @@ static int atcommand_mutearea_sub(struct block_list *bl,va_list ap)
 
 ACMD_FUNC(mutearea)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int time;
 	nullpo_ret(sd);
+
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	if (!message || !*message) {
 		clif_displaymessage(fd, msg_txt(sd,1297)); // Please enter a time in minutes (usage: @mutearea/@stfu <time in minutes>).
@@ -7489,8 +7490,9 @@ ACMD_FUNC(mutearea)
 
 ACMD_FUNC(rates)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char buf[CHAT_SIZE_MAX];
+
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	nullpo_ret(sd);
 	memset(buf, '\0', sizeof(buf));
@@ -7692,7 +7694,7 @@ ACMD_FUNC(fakename)
  * Ragnarok Resources
  *------------------------------------------*/
 ACMD_FUNC(mapflag) {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	
 #define checkflag( cmd ) if ( map[ sd->bl.m ].flag.cmd ) clif_displaymessage(sd->fd,#cmd)
 #define setflag( cmd ) \
 	if ( strcmp( flag_name , #cmd ) == 0 ){\
@@ -7703,6 +7705,7 @@ ACMD_FUNC(mapflag) {
 	}
 	char flag_name[100];
 	short flag=0,i;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 	memset(flag_name, '\0', sizeof(flag_name));
 
@@ -7973,10 +7976,10 @@ ACMD_FUNC(reject)
  *-----------------------------------*/
 ACMD_FUNC(cash)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char output[128];
 	int value;
 	int ret=0;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if( !message || !*message || (value = atoi(message)) == 0 ) {
@@ -8029,9 +8032,9 @@ ACMD_FUNC(cash)
 // @clone/@slaveclone/@evilclone <playername> [Valaris]
 ACMD_FUNC(clone)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int x=0,y=0,flag=0,master=0,i=0;
 	struct map_session_data *pl_sd=NULL;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	if (!message || !*message) {
 		clif_displaymessage(sd->fd,msg_txt(sd,1323)); // You must enter a player name or ID.
@@ -8378,13 +8381,14 @@ ACMD_FUNC(itemlist)
 
 ACMD_FUNC(stats)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char job_jobname[100];
 	char output[CHAT_SIZE_MAX];
 	int i;
+	
 	struct {
 		const char* format;
 		int value;
+		
 	} output_table[] = {
 		{ "Base Level - %d", 0 },
 		{ NULL, 0 },
@@ -8404,7 +8408,7 @@ ACMD_FUNC(stats)
 		{ "JobChangeLvl (3rd) - %d", 0 },
 		{ NULL, 0 }
 	};
-
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	memset(job_jobname, '\0', sizeof(job_jobname));
 	memset(output, '\0', sizeof(output));
 
@@ -8442,10 +8446,10 @@ ACMD_FUNC(stats)
 
 ACMD_FUNC(delitem)
 {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char item_name[100];
 	int nameid, amount = 0, total, idx;
 	struct item_data* id;
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 
 	nullpo_retr(-1, sd);
 
@@ -8648,12 +8652,12 @@ ACMD_FUNC(accinfo) {
 
 /* [Ind] */
 ACMD_FUNC(set) {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	char reg[32], val[128];
 	struct script_data* data;
 	int toset = 0, len;
 	bool is_str = false;
 
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	if( !message || !*message || (toset = sscanf(message, "%31s %128[^\n]s", reg, val)) < 1  ) {
 		clif_displaymessage(fd, msg_txt(sd,1367)); // Usage: @set <variable name> <value>
 		clif_displaymessage(fd, msg_txt(sd,1368)); // Usage: ex. "@set PoringCharVar 50"
@@ -8765,11 +8769,11 @@ ACMD_FUNC(set) {
 	return 0;
 }
 ACMD_FUNC(addperm) {
-	//if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	int perm_size = ARRAYLENGTH(pc_g_permission_name);
 	bool add = (strcmpi(command+1, "addperm") == 0) ? true : false;
 	int i;
 
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	if( !message || !*message ) {
 		sprintf(atcmd_output,  msg_txt(sd,1378),command); // Usage: %s <permission_name>
 		clif_displaymessage(fd, atcmd_output);
