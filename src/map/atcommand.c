@@ -1507,7 +1507,7 @@ static int atcommand_pvpoff_sub(struct block_list *bl,va_list ap)
 
 ACMD_FUNC(pvpoff)
 {
-	//
+	if (sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
 	nullpo_retr(-1, sd);
 
 	if (!map[sd->bl.m].flag.pvp) {
