@@ -1,0 +1,6 @@
+// Old Card Album Obtainable Items Database
+//
+// Structure of Database:
+// GroupID,ItemID,Rate
+
+3,4001,10	// Poring Card
