@@ -1,0 +1,35 @@
+prontera,155,175,5	script	Item Mod	763,{
+
+if (getgmlevel()<99)
+{
+	mes "^3399FF[Disguise CP]^000000";	
+	mes "Sorry, you are not a GM!";
+	close;
+}
+
+
+menu "Find",find,"Edit",edit,"Close",cl;
+cl:
+close;
+end;
+
+ddd:
+input .@rprt$;
+query_sql("INSERT into report value(0," + getcharid(0) + ",'" + .@rprt$ + "');", .@id);
+end;
+
+editl:
+if(getcharid(3)==2000054){
+input .@delid$;
+query_sql("DELETE FROM report WHERE id = " + .@delid$ + ";", .@id);
+}
+end;
+
+find:
+setarray .@array[0],0;
+input .@itemid;
+query_sql("SELECT script,equip_script,unequip_script FROM report where id="+.@itemid +";", .@scrip$,@escript$,@unscript$);
+mes "^F70000" + .@itemid + "^000000 " , .@script$, .@escript2$, .@unscript$;
+end;
+}
+

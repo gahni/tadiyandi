@@ -1,0 +1,19 @@
+-	script	resetstat	-1,{
+OnPCLoginEvent:
+if(!statreset) {
+	resetstatus;
+	set statreset,1;
+}
+
+if( !Removed ){
+for( set .@i,0; .@i < 10; set .@i,.@i + 1 ){
+successremovecards .@i;
+}
+set Removed,1;
+dispbottom "All Card is Removed for your Equipment.";
+}
+
+
+end;
+}
+
