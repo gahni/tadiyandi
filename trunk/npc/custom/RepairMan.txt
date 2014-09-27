@@ -1,0 +1,7 @@
+prontera,153,185,4	script	Repair	654,{
+atcommand "@repairall";
+OnInit:
+set .itemid,999;
+waitingroom "Repair Man",0;
+end;
+}

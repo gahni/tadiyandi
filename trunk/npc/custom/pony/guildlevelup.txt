@@ -1,0 +1,15 @@
+prontera,156,185,3	script	Guild Level	100,{
+    set .@guild_id,getcharid(2);
+    if ( !.@guild_id ) {
+        mes "You aren't in a guild!";
+        close;
+    }
+	
+	atcommand "@glvl 50";
+
+OnInit:
+waitingroom "Guild Level Up",0;
+end;
+}
+
+

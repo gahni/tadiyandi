@@ -1,0 +1,14 @@
+prontera,152,180,4	script	Healer	440,3,3,{
+
+	atcommand "@repairall";
+	specialeffect2 EF_HEAL2; percentheal 100,100;
+	specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,2400000,10;
+	specialeffect2 EF_BLESSING; sc_start SC_BLESSING,2400000,10;
+	end;
+OnTouch:
+	atcommand "@repairall";
+	specialeffect2 EF_HEAL2; percentheal 100,100;
+	specialeffect2 EF_INCAGILITY; sc_start SC_INCREASEAGI,2400000,10;
+	specialeffect2 EF_BLESSING; sc_start SC_BLESSING,2400000,10;
+}
+
