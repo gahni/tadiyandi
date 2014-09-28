@@ -6,7 +6,7 @@ free:
 	getitem 7179,2000;
 	getitem 7227,2000;
 	getitem 20080,2000;
-	close;	
+	//close;	
 	end;
 
 item:
@@ -19,7 +19,7 @@ query_sql("SELECT id FROM item_db2 where name_japanese like '%glorious%';", .@it
 for(set .@i,0; .@i < .@itemcount; set .@i, .@i + 1){
 	if(.@itemid == .@itemid_[.@i]){
 		mes "Item not allowed. Item only available in Battle Ground Store.";
-		close;
+		//close;
 		end;
 		}
 	}
@@ -28,7 +28,7 @@ mes "Amount:";
 input .@amount;
 if(.@amount>500) set .@amount,500;
 getitem .@itemid,.@amount;
-close;
+//close;
 end;
 }
 
@@ -41,7 +41,7 @@ free:
 	getitem 7227,2000;
 	getitem 20080,2000;
 	set zeny,1000000000;
-close;	
+//close;	
 end;
 
 
@@ -57,7 +57,7 @@ mes "Amount:";
 input .@amount;
 if(.@amount>500) set .@amount,500;
 getitem .@itemid,.@amount;
-close;
+//close;
 end;
 
 OnInit:
