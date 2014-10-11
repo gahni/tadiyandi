@@ -1,2 +1,7 @@
 // Internal default is limited to 128 lines.  If you need more, you will need to modify the MOTD_LINE_SIZE definition in pc.c
 
+Welcome to BoholRO!
+Like us on fb/boholro
+
+Invite your friends to come over!
+This is our website: bohol.ro-online.net
