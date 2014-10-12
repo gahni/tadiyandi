@@ -1546,7 +1546,7 @@ static int atcommand_pvpon_sub(struct block_list *bl,va_list ap)
 
 ACMD_FUNC(pvpon)
 {
-	//if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
+	if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->group_id !=4) return 0;
 	nullpo_retr(-1, sd);
 
 	if (map[sd->bl.m].flag.pvp) {
@@ -1594,7 +1594,7 @@ ACMD_FUNC(gvgoff)
  *------------------------------------------*/
 ACMD_FUNC(gvgon)
 {
-	//if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002) return 0;
+	if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->group_id !=4) return 0;
 	nullpo_retr(-1, sd);
 
 	if (map[sd->bl.m].flag.gvg) {
@@ -2732,9 +2732,9 @@ ACMD_FUNC(petrename)
  *------------------------------------------*/
 ACMD_FUNC(recall) {
 	struct map_session_data *pl_sd = NULL;
-
+	if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->group_id !=4) return 0;
 	nullpo_retr(-1, sd);
-
+	
 	if (!message || !*message) {
 		clif_displaymessage(fd, msg_txt(sd,1018)); // Please enter a player name (usage: @recall <char name/ID>).
 		return -1;
@@ -3526,7 +3526,7 @@ ACMD_FUNC(guildrecall)
 	int count;
 	char guild_name[NAME_LENGTH];
 	struct guild *g;
-	//if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
+	if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->group_id !=4) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(guild_name, '\0', sizeof(guild_name));
@@ -3586,7 +3586,7 @@ ACMD_FUNC(partyrecall)
 	char party_name[NAME_LENGTH];
 	struct party_data *p;
 	int count;
-	//if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.account_id !=2000232) return 0;
+	if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->group_id !=4) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(party_name, '\0', sizeof(party_name));
@@ -7644,7 +7644,7 @@ ACMD_FUNC(sizeguild)
 ACMD_FUNC(monsterignore)
 {
 	nullpo_retr(-1, sd);
-
+	if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->group_id !=4) return 0;
 	if (!sd->state.monster_ignore) {
 		sd->state.monster_ignore = 1;
 		clif_displaymessage(sd->fd, msg_txt(sd,1305)); // You are now immune to attacks.
