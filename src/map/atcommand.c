@@ -1937,7 +1937,7 @@ ACMD_FUNC(monster)
 	int i, k, range;
 	short mx, my;
 	unsigned int size;
-	if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->status.group_id !=4) return 0;
+	if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->group_id !=4) return 0;
 	nullpo_retr(-1, sd);
 
 	memset(name, '\0', sizeof(name));
