@@ -8,7 +8,7 @@
 		<?php if (isset($metaRefresh)): ?>
 		<meta http-equiv="refresh" content="<?php echo $metaRefresh['seconds'] ?>; URL=<?php echo $metaRefresh['location'] ?>" />
 		<?php endif ?>
-		<title><?php echo Flux::config('SiteTitle'); if (isset($title)) echo ": $title" ?></title>
+		<title>BoholRO | Official Bohol Ragnarok Online Private Server</title>
 		<link rel="stylesheet" href="<?php echo $this->themePath('css/flux.css') ?>" type="text/css" media="screen" title="" charset="utf-8" />
 		<link rel="stylesheet" href="<?php echo $this->themePath('css/style.css') ?>" type="text/css" media="screen" title="" charset="utf-8" />
 		<link href="<?php echo $this->themePath('css/flux/unitip.css') ?>" rel="stylesheet" type="text/css" media="screen" title="" charset="utf-8" />
