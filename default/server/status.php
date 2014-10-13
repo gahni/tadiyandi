@@ -17,7 +17,7 @@
 		<td class="status"><?php echo $this->serverUpDown($gameServer['loginServerUp']) ?></td>
 		<td class="status"><?php echo $this->serverUpDown($gameServer['charServerUp']) ?></td>
 		<td class="status"><?php echo $this->serverUpDown($gameServer['mapServerUp']) ?></td>
-		<td class="status"><?php echo $gameServer['playersOnline'] ?></td>
+		<td class="status"><?php echo $gameServer['playersOnline'] ?></td> <!--+rand(23,33)+rand(7,17)-->
 	</tr>
 	<?php endforeach ?>
 </table>

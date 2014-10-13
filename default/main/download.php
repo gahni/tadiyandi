@@ -9,11 +9,13 @@
 
 <p style="margin-left: 40px;"></p>
 <br>
-<p style="margin-left: 40px;">USA - <a href="http://75.126.183.170/LimitRO_Full_Installer20140810.exe" target="_blank">Click here!</a></p>
+<p style="margin-left: 40px;">kRO Full - <a href="http://78.193.244.67/share/gmorwMeAD4OZCYr9/kRO%20Full%20Client%202014-08-22.rar" target="_blank">Click here!</a></p>
+<br>
+<p style="margin-left: 40px;">OR</p>
+<br>
+<p style="margin-left: 40px;">kRO Full Download by Parts (for slow internet connection) - <a href="http://pneuma.vhosted.us/Downloads/RO%20Files/" target="_blank">Click here!</a></p>
 
-<p style="margin-left: 40px;">EU&nbsp;- <a href="http://5.153.60.210/LimitRO_Full_Installer20140810.exe" target="_blank">Click here!</a></p>
-
-<p style="margin-left: 40px;">ASIAN&nbsp;- <a href="http://119.81.75.58/LimitRO_Full_Installer20140810.exe" target="_blank">Click here!</a></p>
+<br>
 
 <p style="margin-left: 40px;"></p>
 <br>
@@ -23,9 +25,9 @@
 
 <p style="margin-left: 40px;">* requires KRO installed first</p>
 <br>
-To connect, you must use this launcher<br>
+<p style="margin-left: 40px;">To connect, you must use this launcher<br>
 Download Game Patcher/Launcher: <a href='http://www.mediafire.com/?54a33cv3raz5311' target='_blank'>Click here!</a>
- 
+</p>
 </td>
 		</tr>
                 <tr>
