@@ -1,4 +1,3 @@
-
 // PONY-VPS FREE CUSTOM ITEMS
 //  ==================
 20000,_archangelwings,archabgel_wings,5,20,,0,,2,,1,0xFFFFFFFF,7,2,1,,1,0,2000,{ bonus bAllstats,5; },{},{}
@@ -133,14 +132,14 @@
 20121,Green_Valkyrie_Shield,Green_Valkyrie_Shield,5,500,,300,,3,,1,0xFFFFFFFF,7,2,32,,0,1,1,{ bonus bAllStats,2; bonus2 bResEff,Eff_Stone,10; bonus bShortWeaponDamageReturn,2; } },{},{}
 20122,Green_Valkyrie_Shoes,Green_Valkyrie_Shoes,5,400,,200,,1,,1,0xFFFFFFFF,7,2,64,,0,1,0,{ bonus bAllStats,1; bonus bUnbreakableShoes,0; bonus bMaxHP,3; bonus bMaxSP,3; bonus2 bResEff,Eff_Sleep,10; },{},{}
 20123,Godlike_Wings,Godlike Wings,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bStr,10; bonus bMdef,7; },{},{}
-20124,¸Þ±ä±â¿À¸£µå,Megingjard_AGI,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bAgi,10; bonus bMdef,7; },{},{}
-20125,¸Þ±ä±â¿À¸£µå,Megingjard_INT,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bInt,10; bonus bMdef,7; },{},{}
-20126,¸Þ±ä±â¿À¸£µå,Megingjard_DEX,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bDex,10; bonus bMdef,7; },{},{}
-20127,¸Þ±ä±â¿À¸£µå,Megingjard_LUK,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bLuk,10; bonus bMdef,7; },{},{}
-20128,¸Þ±ä±â¿À¸£µå,Megingjard_VIT,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bVit,10; bonus bMdef,7; },{},{}
-20129,¸Þ±ä±â¿À¸£µå,Megingjard_Str,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bStr,10; bonus bMdef,7; },{},{}
-20130,¿À·¡µÈº¸¶ó»óÀÚ,Box OF thunder Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12028,100; },{},{}
-20131,Àº¹ÝÁö,Vend_Ring,5,30000,,100,,0,,0,0xFFFFFFFE,7,2,136,,20,0,0,{ setoption 0x8; skill 41,1; },{},{ setoption 0x8,0; }
+20124,Â¸ÃžÂ±Ã¤Â±Ã¢Â¿Ã€Â¸Â£ÂµÃ¥,Megingjard_AGI,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bAgi,10; bonus bMdef,7; },{},{}
+20125,Â¸ÃžÂ±Ã¤Â±Ã¢Â¿Ã€Â¸Â£ÂµÃ¥,Megingjard_INT,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bInt,10; bonus bMdef,7; },{},{}
+20126,Â¸ÃžÂ±Ã¤Â±Ã¢Â¿Ã€Â¸Â£ÂµÃ¥,Megingjard_DEX,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bDex,10; bonus bMdef,7; },{},{}
+20127,Â¸ÃžÂ±Ã¤Â±Ã¢Â¿Ã€Â¸Â£ÂµÃ¥,Megingjard_LUK,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bLuk,10; bonus bMdef,7; },{},{}
+20128,Â¸ÃžÂ±Ã¤Â±Ã¢Â¿Ã€Â¸Â£ÂµÃ¥,Megingjard_VIT,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bVit,10; bonus bMdef,7; },{},{}
+20129,Â¸ÃžÂ±Ã¤Â±Ã¢Â¿Ã€Â¸Â£ÂµÃ¥,Megingjard_Str,5,20,,5,,2,,1,0xFFFFFFFF,7,2,136,,94,0,0,{ bonus bStr,10; bonus bMdef,7; },{},{}
+20130,Â¿Ã€Â·Â¡ÂµÃˆÂºÂ¸Â¶Ã³Â»Ã³Ã€Ãš,Box OF thunder Box,18,20,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ getitem 12028,100; },{},{}
+20131,Ã€ÂºÂ¹ÃÃÃ¶,Vend_Ring,5,30000,,100,,0,,0,0xFFFFFFFE,7,2,136,,20,0,0,{ setoption 0x8; skill 41,1; },{},{ setoption 0x8,0; }
 20132,dark_devil_tail,Dark_Devil_tail,5,20,,0,,1,,1,0xFFFFFFFF,7,2,512,,0,0,2107,{ if(BaseClass==Job_Mage||BaseClass==Job_Archer||BaseClass==Job_Thief) bonus bStr,3; bonus bAgi,3; bonus2 bSubRace,RC_DemiHuman,8; bonus bInt,3; bonus bDex,3; bonus bMatkRate,5; bonus bLongAtkRate,5; },{},{}
 20133,_devilwings,Dark_Devil_Wing,5,20,,0,,2,,0,0xFFFFFFFF,7,2,1,,1,0,2108,{ if(BaseClass==Job_Swordman||BaseClass==Job_Acolyte||BaseClass==Job_Thief) bonus bStr,8; bonus bAgi,7; bonus2 bSubRace,RC_DemiHuman,8; if(BaseClass==Job_Mage||BaseClass==Job_Archer) bonus bInt,7; bonus bDex,7; bonus bMatkRate,10; bonus bLongAtkRate,10; if(isequipped(20132) || isequipped(20146)) skill "TK_SEVENWIND",4; bonus bInt,3; bonus bStr,3; },{},{}
 20134,_ldtail,Red_Devil_Tail,5,20,,0,,1,,1,0x00400000,7,2,512,,0,0,2109,{ bonus bAgi,5; bonus2 bAddRace,RC_DemiHuman,10; if(BaseClass==Job_Taekwon) bonus bFlee2,3; },{},{}
@@ -227,3 +226,4 @@
 30032,BazeraldRef,Refined Bazerald,5,20,,500,70,,1,3,0x028F5EEE,7,2,2,4,36,1,1,{ bonus bAtkEle,Ele_Fire; bonus bInt,15; bonus bMatk2,50; bonus bAtk2,50;},{},{}
 30033,F_Bow_Of_Rudra_CRef,Stalker Bow,5,2,,0,100,,5,3,0x000A0808,7,2,34,4,0,0,11,{bonus bDex,15; bonus bInt,15;  bonus2 bSubRace,RC_DemiHuman,10; bonus bAtk2,50; bonus bMatk2,50;},{},{}
 30035,War_AxeRef,Refined War Axe,5,20,,4200,150,,1,3,0x00040400,7,2,2,3,76,1,6,{ bonus bDex,10; bonus bStr,10; bonus bAtk2,100; bonus2 bSkillAtk,"WS_CARTTERMINATION",35; },{},{}
+13042,Krieger_Dagger1,Glorious Damascus,4,0,,0,120,,1,0,0x021F5EEF,7,2,2,4,80,1,1,{ bonus2 bAddRace,RC_DemiHuman,75; bonus2 bIgnoreDefRate,RC_DemiHuman,20; bonus3 bAutoSpell,"PR_LEXDIVINA",1,20; bonus bUnbreakableWeapon,0; if(getrefine() > 5) { bonus2 bAddRace,RC_DemiHuman,(getrefine()-4)*(getrefine()-4); bonus2 bIgnoreDefRate,RC_DemiHuman,5; } if(getrefine() > 8) bonus4 bAutoSpellOnSkill,"RG_RAID","NPC_WIDEBLEEDING",1,250; },{},{}
