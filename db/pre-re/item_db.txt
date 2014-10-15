@@ -6564,3 +6564,6 @@
 19506,T_Valkyrie_Feather_Band,T Valkyrie Feather Band,4,0,,0,,0,,0,0xFFFFFFFF,7,2,1024,,0,1,300,{},{},{}
 19507,Clear_Sun,Clear Sun,4,0,,0,,0,,0,0xFFFFFFFF,7,2,1024,,1,0,654,{},{},{}
 12622,Boarding_Halter,Reins Of Mount,11,0,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ setmounting(); },{},{}
+
+//requested
+31239,SwordBarrier,SwordBarrier,5,10,,10,,10,,0,0xFFFFFFFF,7,2,1,,0,0,1082,{ skill "AC_CONCENTRATE",1;  bonus2 bSubRace,RC_DemiHuman,10; bonus bAllStats,5;  },{},{ sc_end SC_CONCENTRATE; }31240,turtle_back,turtle_back,5,10,,10,,10,,0,0xFFFFFFFF,7,2,1,,0,0,1083,{},{},{}
