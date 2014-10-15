@@ -30,7 +30,7 @@ OnInit:
 		.@item_db$ = "item_db_re";
 	} else {
 		.@mob_db$  = "mob_db";
-		.@item_db$ = "item_db";
+		.@item_db$ = "item_db2";
 	}
 	freeloop 1;
 	.@total = query_sql( "SELECT DISTINCT LEFT( `name_japanese`, 1 ) AS alphabets FROM `"+ .@item_db$ +"` RIGHT JOIN `"+ .@mob_db$ +"` ON `"+ .@item_db$ +"`.`id` = `"+ .@mob_db$ +"`.`dropcardid` WHERE ~(`MODE`) & 32 AND `type` = 6 GROUP BY `name_japanese` ORDER BY alphabets;", .alphabet$ );
