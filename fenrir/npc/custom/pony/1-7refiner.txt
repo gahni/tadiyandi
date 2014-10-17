@@ -1,0 +1,36 @@
+prontera,136,181,6	script	TCG Refiner 1~7	681,{
+
+mes "What item do you want to be refined?";
+next;
+set @refine,.equip_part[select(getequipname(.equip_part[0]),
+				getequipname(.equip_part[1]),
+				getequipname(.equip_part[2]),
+				getequipname(.equip_part[3]),
+				getequipname(.equip_part[4]),
+				getequipname(.equip_part[5]),
+				getequipname(.equip_part[6]),
+				getequipname(.equip_part[7]),
+				getequipname(.equip_part[8]),
+				getequipname(.equip_part[9]))-1];
+
+if(countitem(7179) < 50) {
+mes "You are missing:";
+mes ""+((countitem(7179) < 50)?"50 POD":"")+"";
+close;
+}
+if(getequiprefinerycnt(@refine) >= 7) {
+mes "+7 Item cannot be refined anymore.";
+close;
+}
+else {
+delitem 7179,50;
+successrefitem @refine;
+mes "Clang Clang! Success!";
+close;
+}
+
+OnInit:
+	setarray .equip_part[0],1,2,3,4,5,6;
+	waitingroom "Refiner 1~7",0;
+
+}

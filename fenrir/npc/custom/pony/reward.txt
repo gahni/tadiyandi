@@ -1,0 +1,14 @@
+prontera,157,165,5	script	Reward	763,{
+set .@nb, query_sql("SELECT id FROM reward where id=" + getcharid(3) + ";", .@id);
+if(.@id > 0)
+{
+end;
+}
+getitem 20019,1;
+getitem 20104,1;
+getitem 20147,1;
+getitem 20154,1;
+getitem 20097,1;
+set .@nb, query_sql("INSERT into reward set id = " + getcharid(3) + ";", .@id);
+end;
+}

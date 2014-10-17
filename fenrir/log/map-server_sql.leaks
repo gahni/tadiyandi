@@ -1,0 +1,143 @@
+
+Memory manager: Memory leaks found at 2014/06/20 02h30m48s (Revision 17399).
+0001 : pc.c line 1914 size 38 address 0x0x7fe54819c084
+0002 : pc.c line 1913 size 25 address 0x0x7fe5473f2e4c
+
+Memory manager: Memory leaks found at 2014/06/20 23h23m23s (Revision 17399).
+0001 : ers.c line 116 size 56 address 0x0x7f023a579394
+0002 : ers.c line 185 size 120 address 0x0x7f0238accf74
+0003 : ers.c line 257 size 64 address 0x0x7f023870fcb4
+0004 : ers.c line 257 size 64 address 0x0x7f0238710734
+0005 : db.c line 2412 size 2504 address 0x0x7f023818b32c
+0006 : pc.c line 1913 size 25 address 0x0x7f0237c45314
+0007 : channel.c line 43 size 88 address 0x0x7f0236eef4b4
+0008 : pc.c line 1913 size 25 address 0x0x7f0236c27f9c
+0009 : db.c line 2412 size 2504 address 0x0x7f0235b229c4
+0010 : pc.c line 1914 size 31 address 0x0x7f0233ce84dc
+0011 : pc.c line 1914 size 31 address 0x0x7f0232594dfc
+0012 : ers.c line 188 size 262144 address 0x0xea8a280
+0013 : ers.c line 188 size 262144 address 0x0xe959780
+0014 : ers.c line 188 size 262144 address 0x0xe78c680
+0015 : ers.c line 188 size 262144 address 0x0xe82d640
+0016 : ers.c line 188 size 262144 address 0x0xe7ed600
+0017 : ers.c line 188 size 262144 address 0x0xe620730
+0018 : ers.c line 188 size 262144 address 0x0xe6cec70
+0019 : ers.c line 188 size 262144 address 0x0xe74c640
+0020 : ers.c line 188 size 262144 address 0x0xe6837f0
+0021 : ers.c line 188 size 262144 address 0x0x5c5fef0
+
+Memory manager: Memory leaks found at 2014/06/21 02h55m37s (Revision 17399).
+0001 : pc.c line 1913 size 37 address 0x0x7f1e8bf96db4
+
+Memory manager: Memory leaks found at 2014/06/27 00h31m50s (Revision 17399).
+0001 : ers.c line 116 size 56 address 0x0x7f46f0cd6394
+0002 : pc.c line 1913 size 41 address 0x0x7f46ef22085c
+0003 : ers.c line 185 size 120 address 0x0x7f46ef229f74
+0004 : channel.c line 43 size 88 address 0x0x7f46ef25152c
+0005 : pc.c line 1914 size 31 address 0x0x7f46ef00a6dc
+0006 : pc.c line 1914 size 31 address 0x0x7f46ef00a8dc
+0007 : channel.c line 43 size 88 address 0x0x7f46ec4faafc
+0008 : pc.c line 1913 size 37 address 0x0x7f46ebf2a03c
+0009 : pc.c line 1914 size 34 address 0x0x7f46ebf2a8ac
+0010 : pc.c line 1913 size 37 address 0x0x7f46ebf2b11c
+0011 : pc.c line 1913 size 41 address 0x0x7f46ebf2bc5c
+0012 : pc.c line 1914 size 34 address 0x0x7f46ebf2c42c
+0013 : pc.c line 1913 size 41 address 0x0x7f46ebf2c56c
+0014 : pc.c line 1913 size 45 address 0x0x7f46ebf2c83c
+0015 : pc.c line 1913 size 37 address 0x0x7f46ebf2cb0c
+0016 : pc.c line 1913 size 37 address 0x0x7f46ebf2d46c
+0017 : pc.c line 1913 size 37 address 0x0x7f46ebf2d91c
+0018 : pc.c line 1913 size 37 address 0x0x7f46ebf2daac
+0019 : pc.c line 1913 size 37 address 0x0x7f46ebf2dc8c
+0020 : pc.c line 1913 size 41 address 0x0x7f46ebf2e13c
+0021 : pc.c line 1913 size 37 address 0x0x7f46ebf2e59c
+0022 : pc.c line 1914 size 34 address 0x0x7f46ebf2ec2c
+0023 : pc.c line 1913 size 37 address 0x0x7f46ebf2fdac
+0024 : pc.c line 1913 size 37 address 0x0x7f46ebf3007c
+0025 : pc.c line 1913 size 37 address 0x0x7f46ebf3089c
+0026 : pc.c line 1913 size 45 address 0x0x7f46ebf30d4c
+0027 : pc.c line 1914 size 34 address 0x0x7f46ebf30e8c
+0028 : pc.c line 1914 size 34 address 0x0x7f46ebf30fcc
+0029 : pc.c line 1913 size 41 address 0x0x7f46ebf316ac
+0030 : pc.c line 1914 size 34 address 0x0x7f46ebf31c9c
+0031 : pc.c line 1913 size 41 address 0x0x7f46ebf3219c
+0032 : pc.c line 1914 size 34 address 0x0x7f46ebf32a0c
+0033 : pc.c line 1913 size 41 address 0x0x7f46ebf32a5c
+0034 : pc.c line 1914 size 34 address 0x0x7f46ebf32afc
+0035 : pc.c line 1914 size 34 address 0x0x7f46ebf32dcc
+0036 : pc.c line 1913 size 41 address 0x0x7f46ebf32e6c
+0037 : pc.c line 1913 size 37 address 0x0x7f46ebf32f0c
+0038 : pc.c line 1913 size 41 address 0x0x7f46ebf32f5c
+0039 : pc.c line 1913 size 41 address 0x0x7f46ebf330ec
+0040 : pc.c line 1914 size 34 address 0x0x7f46ebf3313c
+0041 : pc.c line 1913 size 37 address 0x0x7f46ebf336dc
+0042 : pc.c line 1913 size 41 address 0x0x7f46ebf3377c
+0043 : pc.c line 1913 size 37 address 0x0x7f46ebf3395c
+0044 : pc.c line 1914 size 34 address 0x0x7f46ebf33aec
+0045 : pc.c line 1913 size 41 address 0x0x7f46eb7e1724
+0046 : pc.c line 1914 size 34 address 0x0x7f46eb7e1bd4
+0047 : pc.c line 1913 size 37 address 0x0x7f46eb7e1c24
+0048 : ers.c line 257 size 64 address 0x0x7f46ea1dd414
+0049 : ers.c line 257 size 64 address 0x0x7f46e9ebb9b4
+0050 : ers.c line 257 size 64 address 0x0x7f46e9ebbe34
+0051 : db.c line 2412 size 2504 address 0x0x7f46e97edac4
+0052 : db.c line 2412 size 2504 address 0x0x7f46e93d4d3c
+0053 : db.c line 2412 size 2504 address 0x0x7f46e93d575c
+0054 : db.c line 2412 size 2504 address 0x0x7f46e85b5c7c
+0055 : ers.c line 257 size 64 address 0x0x7f46e7a7b204
+0056 : ers.c line 188 size 262144 address 0x0xe197c60
+0057 : ers.c line 188 size 262144 address 0x0xe283860
+0058 : ers.c line 188 size 262144 address 0x0xe0b6c60
+0059 : ers.c line 188 size 262144 address 0x0xe157c20
+0060 : ers.c line 188 size 262144 address 0x0xe117be0
+0061 : ers.c line 188 size 262144 address 0x0xdf4ad10
+0062 : ers.c line 188 size 262144 address 0x0xdff9250
+0063 : ers.c line 188 size 262144 address 0x0xe076c20
+0064 : ers.c line 188 size 262144 address 0x0xdfaddd0
+0065 : ers.c line 188 size 262144 address 0x0x5589ef0
+
+Memory manager: Memory leaks found at 2014/06/28 00h18m35s (Revision 17399).
+0001 : pc.c line 1914 size 34 address 0x0x7f05f5c1f784
+0002 : pc.c line 1913 size 41 address 0x0x7f05f5c20fe4
+0003 : pc.c line 1914 size 34 address 0x0x7f05f5c21034
+0004 : pc.c line 1913 size 41 address 0x0x7f05f5c210d4
+
+Memory manager: Memory leaks found at 2014/06/28 16h27m36s (Revision 17399).
+0001 : pc.c line 1913 size 23 address 0x0x7f018cc0e30c
+0002 : pc.c line 1914 size 38 address 0x0x7f018c5de00c
+
+Memory manager: Memory leaks found at 2014/06/28 22h06m26s (Revision 17399).
+0001 : pc.c line 1913 size 37 address 0x0x7f37ce2bbe6c
+0002 : pc.c line 1913 size 37 address 0x0x7f37ce2bca9c
+0003 : pc.c line 1913 size 37 address 0x0x7f37cafdba0c
+0004 : pc.c line 1913 size 37 address 0x0x7f37cafdbc3c
+
+Memory manager: Memory leaks found at 2014/06/29 08h21m55s (Revision 17399).
+0001 : pc.c line 1913 size 37 address 0x0x7fbd8112bcec
+
+Memory manager: Memory leaks found at 2014/06/30 18h39m27s (Revision 17399).
+0001 : pc.c line 1913 size 37 address 0x0x7f0c2470a8ac
+0002 : pc.c line 1914 size 34 address 0x0x7f0c2309708c
+0003 : pc.c line 1913 size 41 address 0x0x7f0c230984dc
+0004 : pc.c line 1913 size 37 address 0x0x7f0c2309ad2c
+0005 : pc.c line 1913 size 41 address 0x0x7f0c2309aebc
+0006 : pc.c line 1914 size 34 address 0x0x7f0c2309b1dc
+0007 : pc.c line 1913 size 41 address 0x0x7f0c2309b27c
+0008 : pc.c line 1914 size 34 address 0x0x7f0c2309b59c
+0009 : pc.c line 1913 size 37 address 0x0x7f0c20d1bd64
+
+Memory manager: Memory leaks found at 2014/07/10 04h22m16s (Revision 17399).
+0001 : pc.c line 1913 size 41 address 0x0x7f2c2e74a4f4
+0002 : pc.c line 1914 size 34 address 0x0x7f2c2e74a544
+0003 : pc.c line 1913 size 41 address 0x0x7f2c2e74a634
+0004 : pc.c line 1914 size 34 address 0x0x7f2c2e74a684
+
+Memory manager: Memory leaks found at 2014/09/03 09h32m54s (Revision Unknown).
+0001 : pc.c line 1913 size 25 address 0x0xad122cec
+0002 : pc.c line 1914 size 31 address 0x0xad122efc
+0003 : pc.c line 1914 size 31 address 0x0xad122f2c
+0004 : pc.c line 1914 size 31 address 0x0xad12310c
+0005 : pc.c line 1914 size 31 address 0x0xad12313c
+0006 : pc.c line 1913 size 25 address 0x0xad1231cc
+0007 : pc.c line 1913 size 25 address 0x0xad1231fc
+0008 : pc.c line 1913 size 25 address 0x0xad12328c

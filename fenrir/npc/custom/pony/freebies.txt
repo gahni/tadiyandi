@@ -1,0 +1,67 @@
+/*
+prontera,150,187,4	script	Testing	790,{
+menu "Item:",item,"Freebies",free;
+
+free:
+	getitem 7179,2000;
+	getitem 7227,2000;
+	getitem 20080,2000;
+	//close;	
+	end;
+
+item:
+setarray .@itemid_[0],0;
+input .@itemid;
+query_sql("SELECT count(id) FROM item_db2 where name_japanese like '%glorious%';", .@itemcount);
+
+query_sql("SELECT id FROM item_db2 where name_japanese like '%glorious%';", .@itemid_);
+
+for(set .@i,0; .@i < .@itemcount; set .@i, .@i + 1){
+	if(.@itemid == .@itemid_[.@i]){
+		mes "Item not allowed. Item only available in Battle Ground Store.";
+		//close;
+		end;
+		}
+	}
+
+mes "Amount:";            
+input .@amount;
+if(.@amount>500) set .@amount,500;
+getitem .@itemid,.@amount;
+//close;
+end;
+}
+
+*/
+
+prontera,150,187,4	script	Free Items Here	790,{
+menu "Item:",item,"Freebies",free;
+free:
+	getitem 7179,2000;
+	getitem 7227,2000;
+	getitem 20080,2000;
+	set zeny,1000000000;
+//close;	
+end;
+
+
+item:
+mes "Item Id: ";
+input .@itemid;
+if(.@itemid >= 12429 && .@itemid <=12435 || .@itemid==14524 || .@itemid==12257 || .@itemid==12135 || .@itemid==7959 ||
+   .@itemid >= 12215 && .@itemid <= 12220 || .@itemid >= 14314 && .@itemid <= 14315 || .@itemid == 14517 || .@itemid == 14519 ||
+   .@itemid == 14521 || .@itemid == 14530 || .@itemid == 14531 || .@itemid == 4399 || .@itemid == 14539 || .@itemid == 14540 || 
+   .@itemid == 4318 || .@itemid == 14597 || .@itemid == 4305 || .@itemid == 14598 || .@itemid == 4407 || .@itemid == 4376 || 
+   .@itemid == 4236 || .@itemid >= 14602 && .@itemid <= 14605){mes "Item available in woe item shop and monster drop only."; close; end;}
+mes "Amount:";            
+input .@amount;
+if(.@amount>500) set .@amount,500;
+getitem .@itemid,.@amount;
+//close;
+end;
+
+OnInit:
+waitingroom "Freebies",0;
+end;
+
+}

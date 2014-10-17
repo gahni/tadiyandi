@@ -1,0 +1,169 @@
+/*
+prontera,157,165,5	script	GM Reports	763,{
+
+if (getgmlevel()<99)
+{
+	mes "^3399FF[Disguise CP]^000000";	
+	mes "Sorry, you are not a GM!";
+	close;
+}
+
+mes "[GM REPORTS]";
+setarray .@array[0],0;
+query_sql("SELECT count(id) FROM report;", .@idcount);
+query_sql("SELECT id FROM report;", .@array);
+for(set .@i,0;.@i < .@idcount; set .@i,.@i+1){
+query_sql("SELECT * FROM report where id =" + .@array[.@i] + ";", .@data,.@data1,.@data2$);
+query_sql("SELECT name FROM `char` where char_id =" + .@data1 + ";", .@name$);
+mes .@data + " ^F70000" + .@name$ + "^000000 " + .@data2$;
+}
+
+mes "[PLAYER SUGGESTION/COMMENT]";
+setarray .@array2[0],0;
+query_sql("SELECT count(id) FROM sugcom;", .@idcount2);
+query_sql("SELECT id FROM sugcom;", .@array2);
+for(set .@i,0;.@i < .@idcount2; set .@i,.@i+1){
+query_sql("SELECT * FROM sugcom where id =" + .@array2[.@i] + ";", .@data2,.@data12,.@data22$);
+query_sql("SELECT name FROM `char` where char_id =" + .@data12 + ";", .@name2$);
+mes .@data2 + " ^F70000" + .@name2$ + "^000000 " + .@data22$;
+}
+
+
+
+
+menu "Add",rep,"Delete",del,"Close",cl;
+cl:
+close;
+end;
+
+rep:
+input .@rprt$;
+query_sql("INSERT into report value(0," + getcharid(0) + ",'" + .@rprt$ + "');", .@id);
+end;
+
+del:
+if(getcharid(3)==2000054){
+input .@delid$;
+query_sql("DELETE FROM report WHERE id = " + .@delid$ + ";", .@id);
+}
+end;
+
+OnInit:
+waitingroom "GM Reports",0;
+}
+
+
+
+prontera,155,175,5	script	Item Info	763,{
+mes "Item Info:";
+mes "You can find your item bonuses here.";
+mes "The information you see is comming from the item database.";
+mes "Any changes from the database will be seen here.";
+mes "I am making this script just to be transparent to all players";
+mes "If you have any suggestion pls feel free to do so by adding your suggestion/comment by clicking add comment button below.";
+next;
+mes "[Menu]";
+menu "View Item Info",find,"Edit Item  Info[GM]",edit,"Add Comment/Suggestion",com,"Close",cl;
+cl:
+	close;
+	end;
+
+com:
+	mes "Enter your comment/suggestion here";
+	input .@msg$;
+	query_sql("INSERT into sugcom value(0," + getcharid(0) + ",'" + .@msg$ + "');", .@id);
+	mes "Your suggestion/comment will be review and decided by the BRO staff.";
+	mes "We thank you for your concern..";
+	close;
+	end;
+
+edit:
+
+	if (getgmlevel()<99)
+	{
+	mes "^3399FF[Disguise CP]^000000";	
+	mes "Sorry, you are not a GM!";
+	close;
+	}
+
+	setarray .@scriptarray$[0],0;
+
+	if(getcharid(3)==2000054){
+	mes "Make sure you type the script correctly.";
+	mes "Pls be careful, it's case sensitive.";
+	mes "Enter item id";
+	input .@itemid;
+	if(.@itemid<20000) {mes "Cannot modify ordinary items. You can modify only the custom itesm. [Custom item id start from 20000 up to 30036]";
+	close;
+	end;
+	}
+	query_sql("SELECT script, equip_script, unequip_script, slots,name_english FROM item_db2 where id="+ .@itemid +";", .@script$,.@escript$,.@unscript$,.@slots,.@name$);
+	mes "^F70000" + .@itemid + "^000000 " ,"^F70000" + "Item Name: " + "^000000 " + .@name$, "Slotted: " + .@slots,"^F70000" +  "Script: " + "^000000 " + .@script$,"^F70000" +  "On Equip Script: " + "^000000 " + .@escript2$,"^F70000" +  "On Un Equip Script: " + "^000000 " + .@unscript$;
+
+	.@count=0;
+	mes "[Menu]";
+
+	mes "You can use @idsearch command";
+	mes "Examle: @idsearch poring card";
+	menu "Edit Script",y,"Next",n;
+		y:
+		{
+		input .@scriptarray$[.@count];
+		.@count++;
+		mes "[Menu]";
+		menu "Add More",y_,"Close",close_;
+		y_:
+		goto y;
+		
+			close_:
+			for(set .@i,0; .@i<.@count;set .@i,.@i+1)
+			{
+			.@script_$ = .@script_$ + .@scriptarray$[.@i];
+			}
+		mes .@script_$;
+		mes "Pls double check and Type \"Update\" if your done..";
+		input .@sure$;
+		if(.@sure$=="Update"){
+			query_sql("UPDATE item_db2 set script='" + .@script_$ + "'  WHERE id = " + .@itemid + ";", .@id);
+			mes "Done.";
+			close;
+			} else {mes "Sorry!"; close; end;}
+		}
+
+	n:
+	mes "Ok.";
+	close;
+	end;
+	}
+
+find:
+	input .@itemid;
+	query_sql("SELECT script, equip_script, unequip_script, slots,name_english FROM item_db2 where id="+ .@itemid +";", .@script$,.@escript$,.@unscript$,.@slots,.@name$);
+	mes "^F70000" + .@itemid + "^000000 " ,"^F70000" + "Item Name: " + "^000000 " + .@name$, "Slotted: " + .@slots,"^F70000" +  "Script: " + "^000000 " + .@script$,"^F70000" +  "On Equip Script: " + "^000000 " + .@escript2$,"^F70000" +  "On Un Equip Script: " + "^000000 " + .@unscript$;
+	end;
+
+OnInit:
+waitingroom "Server Item Information NPC",0;
+}
+
+
+prontera,156,170,3	script	Player IP	763,{
+if (getgmlevel()<99)
+	{
+	mes "^3399FF[Disguise CP]^000000";	
+	mes "Sorry, you are not a GM!";
+	close;
+	}
+
+    mes "Input character name";
+    input .@name$;
+    mes getcharip(getcharid(3, .@name$));
+    close;
+OnInit:
+waitingroom "Player IP",0;
+}
+
+
+
+
+*/
