@@ -40,7 +40,7 @@
 // -- 30000,JobClassTicket,JobClassTicket,11,10,,10,,,,,0xFFFFFFFF,7,2,,,,,,{ doevent "ClassHelper::OnPCLoginEvent"; },{},{}
 
 
-prontera,153,184,4	script	ClassHelper	718,{
+prontera,153,184,4	script	ClassHelper123	718,{
 
 // -- Configuration Option
 set .npcname$,"[ ^0000FF Class Helper ^000000 ]";
@@ -202,19 +202,19 @@ TransSecondJob_Classes:
 
 // --- callsub Job_Changing,<JOB>,<BaseLv>,<JobLv>,<Skill>,<Announce>;	
 			
-			Case 1:	callsub Job_Changing,4008,255,120,130,"All";
-			Case 2:	callsub Job_Changing,4009,255,120,130,"All";
-			Case 3:	callsub Job_Changing,4010,255,120,130,"All";
-			Case 4:	callsub Job_Changing,4011,255,120,130,"All";
-			Case 5:	callsub Job_Changing,4012,255,120,130,"All";
-			Case 6:	callsub Job_Changing,4013,255,120,130,"All";
-			Case 7:	callsub Job_Changing,4015,255,120,130,"All";
-			Case 8:	callsub Job_Changing,4016,255,120,130,"All";
-			Case 9:	callsub Job_Changing,4017,255,120,130,"All";
-			Case 10:	callsub Job_Changing,4018,255,120,130,"All";
-			Case 11:	callsub Job_Changing,4019,255,120,130,"All";
-			Case 12:	callsub Job_Changing,4021,255,120,130,"All";
-			Case 13:	callsub Job_Changing,4020,255,120,130,"All";
+			Case 1:	callsub Job_Changing,4008,99,70,130,"All";
+			Case 2:	callsub Job_Changing,4009,99,70,130,"All";
+			Case 3:	callsub Job_Changing,4010,99,70,130,"All";
+			Case 4:	callsub Job_Changing,4011,99,70,130,"All";
+			Case 5:	callsub Job_Changing,4012,99,70,130,"All";
+			Case 6:	callsub Job_Changing,4013,99,70,130,"All";
+			Case 7:	callsub Job_Changing,4015,99,70,130,"All";
+			Case 8:	callsub Job_Changing,4016,99,70,130,"All";
+			Case 9:	callsub Job_Changing,4017,99,70,130,"All";
+			Case 10:	callsub Job_Changing,4018,99,70,130,"All";
+			Case 11:	callsub Job_Changing,4019,99,70,130,"All";
+			Case 12:	callsub Job_Changing,4021,99,70,130,"All";
+			Case 13:	callsub Job_Changing,4020,99,70,130,"All";
 			Case 14:	goto Main_Menu;
 		}
 

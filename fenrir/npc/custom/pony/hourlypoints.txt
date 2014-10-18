@@ -59,7 +59,7 @@ if(@minute == 60){
 	set @minute,0;
 	set .@point_amt, 10; //Points to get every hour (default: 10)
 	getitem 7959,100; 
-	dispbottom "You received  TCG Cards by staying ingame for 1 hour";
+	dispbottom "You received TCG Cards by staying ingame for 1 hour";
 	set @consecutive_hour, @consecutive_hour + 1;
 	}
 

@@ -34,34 +34,66 @@ end;
 
 */
 
-prontera,150,187,4	script	Free Items Here	790,{
-menu "Item:",item,"Freebies",free;
+prontera,150,187,4	script	Freebies	790,{
+// gahni
+menu "BoholRO - Freebies",free,"Item Maker",item;
+
 free:
-	getitem 7179,2000;
-	getitem 7227,2000;
-	getitem 20080,2000;
-	set zeny,1000000000;
-//close;	
-end;
+	if(gettimetick(2) - lastTimeTalked > (60 * 60 * 24)) {
+	//set .@charidif, getcharid(3);
+	//query_sql("select value from `global_reg_value` WHERE `char_id` = "+.@charidif+"", freebon);
+	//if (freebon==0) { goto FreeOn; }
+	//else { goto FreeOff; }
+
+			//FreeON:
+				set lastTimeTalked,gettimetick(2);
+				//set freebon,1;
+				set .@free1, rand(1,30)+rand(1,30)+rand(1,30);
+				set .@free2, rand(1,30)+rand(1,30)+rand(1,30);
+				set .@free3, rand(1,30)+rand(1,30)+rand(1,30);
+				getitem 7179, .@free1;
+				getitem 7227, .@free2;
+				getitem 20080, .@free3;
+			
+				mes "^0000FF"+strcharinfo(0)+"^000000, you received: \n \n POD ("+.@free1+") \n TCG ("+.@free2+") \n Credits ("+.@free3+")";
+				mes "\n Thank you for playing BoholRO!";
+				end;
+}
+			//FreeOff:
+				mes "You have claimed your freebies for today!";
+				end;
+			
+	end;
 
 
 item:
-mes "Item Id: ";
-input .@itemid;
-if(.@itemid >= 12429 && .@itemid <=12435 || .@itemid==14524 || .@itemid==12257 || .@itemid==12135 || .@itemid==7959 ||
+	if (getgmlevel()==0) { 
+				mes "I\'m sorry ^0000FF"+strcharinfo(0)+"^000000 but this option is for GM use only.\n \n \nYou may ask any available GM to assists you.";
+	end; 
+	}
+	mes "Enter item ID: ";
+	input .@itemid;
+	if(.@itemid >= 12429 && .@itemid <=12435 || .@itemid==14524 || .@itemid==12257 || .@itemid==12135 || .@itemid==7959 ||
    .@itemid >= 12215 && .@itemid <= 12220 || .@itemid >= 14314 && .@itemid <= 14315 || .@itemid == 14517 || .@itemid == 14519 ||
    .@itemid == 14521 || .@itemid == 14530 || .@itemid == 14531 || .@itemid == 4399 || .@itemid == 14539 || .@itemid == 14540 || 
    .@itemid == 4318 || .@itemid == 14597 || .@itemid == 4305 || .@itemid == 14598 || .@itemid == 4407 || .@itemid == 4376 || 
-   .@itemid == 4236 || .@itemid >= 14602 && .@itemid <= 14605){mes "Item available in woe item shop and monster drop only."; close; end;}
-mes "Amount:";            
+   .@itemid == 4236 || .@itemid >= 14602 && .@itemid <= 14605){mes "Item available in WOE item shop and monster drop only."; end;}
+/*mes "Amount:";            
 input .@amount;
-if(.@amount>500) set .@amount,500;
-getitem .@itemid,.@amount;
-//close;
+if(.@amount<=1) set .@amount,1;
+*/
+//only 1 item at a time
+getitem .@itemid,1;
+
 end;
 
 OnInit:
+OnClock1615: //{
+
+		//query_sql("DELETE FROM `global_reg_value` WHERE `str` = 'freebon'");
+		//announce "(Fenrir) You may claim your FREEBIES for today right now!",bc_all | bc_blue;
+		//announce "(Fenrir) Please relog your character first before claiming your free items",bc_all | bc_blue;
+		//}
 waitingroom "Freebies",0;
 end;
-
 }

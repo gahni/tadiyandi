@@ -112,12 +112,12 @@ FirstJob_Classes:
 
 // --- callsub Job_Changing,<JOB>,<BaseLv>,<JobLv>,<Skill>,<Announce>;	
 
-			Case 1:	callsub Job_Changing,1,255,120,120,"All";
-			Case 2:	callsub Job_Changing,2,255,120,120,"All";
-			Case 3:	callsub Job_Changing,3,255,120,120,"All";
-			Case 4:	callsub Job_Changing,4,255,120,120,"All";
-			Case 5:	callsub Job_Changing,5,255,120,120,"All";
-			Case 6:	callsub Job_Changing,6,255,120,120,"All";
+			Case 1:	callsub Job_Changing,1,99,70,120,"All";
+			Case 2:	callsub Job_Changing,2,99,70,120,"All";
+			Case 3:	callsub Job_Changing,3,99,70,120,"All";
+			Case 4:	callsub Job_Changing,4,99,70,120,"All";
+			Case 5:	callsub Job_Changing,5,99,70,120,"All";
+			Case 6:	callsub Job_Changing,6,99,70,120,"All";
 			Case 7:	goto Main_Menu;
 		}
 
@@ -135,12 +135,12 @@ HighFirstJob_Classes:
 
 // --- callsub Job_Changing,<JOB>,<BaseLv>,<JobLv>,<Skill>,<Announce>;	
 
-			Case 1:	callsub Job_Changing,4002,255,120,120,"All";
-			Case 2:	callsub Job_Changing,4003,255,120,120,"All";
-			Case 3:	callsub Job_Changing,4004,255,120,120,"All";
-			Case 4:	callsub Job_Changing,4005,255,120,120,"All";
-			Case 5:	callsub Job_Changing,4006,255,120,120,"All";
-			Case 6:	callsub Job_Changing,4007,255,120,120,"All";
+			Case 1:	callsub Job_Changing,4002,99,70,120,"All";
+			Case 2:	callsub Job_Changing,4003,99,70,120,"All";
+			Case 3:	callsub Job_Changing,4004,99,70,120,"All";
+			Case 4:	callsub Job_Changing,4005,99,70,120,"All";
+			Case 5:	callsub Job_Changing,4006,99,70,120,"All";
+			Case 6:	callsub Job_Changing,4007,99,70,120,"All";
 			Case 7:	goto Main_Menu;
 		}
 		
@@ -165,19 +165,19 @@ SecondJob_Classes:
 
 // --- callsub Job_Changing,<JOB>,<BaseLv>,<JobLv>,<Skill>,<Announce>;	
 			
-			Case 1:	callsub Job_Changing,7,255,120,120,"Self";
-			Case 2:	callsub Job_Changing,8,255,120,120,"Self";
-			Case 3:	callsub Job_Changing,9,255,120,120,"Self";
-			Case 4:	callsub Job_Changing,10,255,120,120,"Self";
-			Case 5:	callsub Job_Changing,11,255,120,120,"Self";
-			Case 6:	callsub Job_Changing,12,255,120,120,"Self";
-			Case 7:	callsub Job_Changing,14,255,120,120,"Self";
-			Case 8:	callsub Job_Changing,15,255,120,120,"Self";
-			Case 9:	callsub Job_Changing,16,255,120,120,"Self";
-			Case 10:	callsub Job_Changing,17,255,120,120,"Self";
-			Case 11:	callsub Job_Changing,18,255,120,120,"Self";
-			Case 12:	callsub Job_Changing,20,255,120,120,"Self";
-			Case 13:	callsub Job_Changing,19,255,120,120,"Self";
+			Case 1:	callsub Job_Changing,7,99,70,120,"Self";
+			Case 2:	callsub Job_Changing,8,99,70,120,"Self";
+			Case 3:	callsub Job_Changing,9,99,70,120,"Self";
+			Case 4:	callsub Job_Changing,10,99,70,120,"Self";
+			Case 5:	callsub Job_Changing,11,99,70,120,"Self";
+			Case 6:	callsub Job_Changing,12,99,70,120,"Self";
+			Case 7:	callsub Job_Changing,14,99,70,120,"Self";
+			Case 8:	callsub Job_Changing,15,99,70,120,"Self";
+			Case 9:	callsub Job_Changing,16,99,70,120,"Self";
+			Case 10:	callsub Job_Changing,17,99,70,120,"Self";
+			Case 11:	callsub Job_Changing,18,99,70,120,"Self";
+			Case 12:	callsub Job_Changing,20,99,70,120,"Self";
+			Case 13:	callsub Job_Changing,19,99,70,120,"Self";
 			Case 14:	goto Main_Menu;
 		}
 
@@ -202,19 +202,19 @@ TransSecondJob_Classes:
 
 // --- callsub Job_Changing,<JOB>,<BaseLv>,<JobLv>,<Skill>,<Announce>;	
 			
-			Case 1:	callsub Job_Changing,4008,255,120,120,"Self";
-			Case 2:	callsub Job_Changing,4009,255,120,120,"Self";
-			Case 3:	callsub Job_Changing,4010,255,120,120,"Self";
-			Case 4:	callsub Job_Changing,4011,255,120,120,"Self";
-			Case 5:	callsub Job_Changing,4012,255,120,120,"Self";
-			Case 6:	callsub Job_Changing,4013,255,120,120,"Self";
-			Case 7:	callsub Job_Changing,4015,255,120,120,"Self";
-			Case 8:	callsub Job_Changing,4016,255,120,120,"Self";
-			Case 9:	callsub Job_Changing,4017,255,120,120,"Self";
-			Case 10:	callsub Job_Changing,4018,255,120,120,"Self";
-			Case 11:	callsub Job_Changing,4019,255,120,120,"Self";
-			Case 12:	callsub Job_Changing,4021,255,120,120,"Self";
-			Case 13:	callsub Job_Changing,4020,255,120,120,"Self";
+			Case 1:	callsub Job_Changing,4008,99,70,120,"Self";
+			Case 2:	callsub Job_Changing,4009,99,70,120,"Self";
+			Case 3:	callsub Job_Changing,4010,99,70,120,"Self";
+			Case 4:	callsub Job_Changing,4011,99,70,120,"Self";
+			Case 5:	callsub Job_Changing,4012,99,70,120,"Self";
+			Case 6:	callsub Job_Changing,4013,99,70,120,"Self";
+			Case 7:	callsub Job_Changing,4015,99,70,120,"Self";
+			Case 8:	callsub Job_Changing,4016,99,70,120,"Self";
+			Case 9:	callsub Job_Changing,4017,99,70,120,"Self";
+			Case 10:	callsub Job_Changing,4018,99,70,120,"Self";
+			Case 11:	callsub Job_Changing,4019,99,70,120,"Self";
+			Case 12:	callsub Job_Changing,4021,99,70,120,"Self";
+			Case 13:	callsub Job_Changing,4020,99,70,120,"Self";
 			Case 14:	goto Main_Menu;
 		}
 
@@ -269,12 +269,12 @@ ExpandedJob_Classes:
 
 // --- callsub Job_Changing,<JOB>,<BaseLv>,<JobLv>,<Skill>,<Announce>;    
 
-            Case 1:    callsub Job_Changing,23,255,120,120,"All";
-            Case 2:    callsub Job_Changing,24,255,120,120,"All";
-            Case 3:    callsub Job_Changing,25,255,120,120,"All";
-            Case 4:    callsub Job_Changing,4046,255,120,120,"All";
-            Case 5:    callsub Job_Changing,4047,255,120,120,"All";
-            Case 6:    callsub Job_Changing,4049,255,120,120,"All";
+            Case 1:    callsub Job_Changing,23,99,70,120,"All";
+            Case 2:    callsub Job_Changing,24,99,70,120,"All";
+            Case 3:    callsub Job_Changing,25,99,70,120,"All";
+            Case 4:    callsub Job_Changing,4046,99,70,120,"All";
+            Case 5:    callsub Job_Changing,4047,99,70,120,"All";
+            Case 6:    callsub Job_Changing,4049,99,70,120,"All";
             Case 7:    goto Main_Menu;
         }
 
@@ -306,26 +306,26 @@ BabyJob_Classes:
 
 // --- callsub Job_Changing,<JOB>,<BaseLv>,<JobLv>,<Skill>,<Announce>;    
             
-            Case 1:    callsub Job_Changing,4024,255,120,120,"All";
-            Case 2:    callsub Job_Changing,4025,255,120,120,"All";
-            Case 3:    callsub Job_Changing,4026,255,120,120,"All";
-            Case 4:    callsub Job_Changing,4027,255,120,120,"All";
-            Case 5:    callsub Job_Changing,4028,255,120,120,"All";
-            Case 6:    callsub Job_Changing,4029,255,120,120,"All";
-            Case 7:    callsub Job_Changing,4030,255,120,120,"All";
-            Case 8:    callsub Job_Changing,4031,255,120,120,"All";
-            Case 9:    callsub Job_Changing,4032,255,120,120,"All";
-            Case 10:    callsub Job_Changing,4033,255,120,120,"All";
-            Case 11:    callsub Job_Changing,4034,255,120,120,"All";
-            Case 12:    callsub Job_Changing,4035,255,120,120,"All";
-            Case 13:    callsub Job_Changing,4037,255,120,120,"All";
-            Case 14:    callsub Job_Changing,4038,255,120,120,"All";
-            Case 15:    callsub Job_Changing,4039,255,120,120,"All";
-            Case 16:    callsub Job_Changing,4040,255,120,120,"All";
-            Case 17:    callsub Job_Changing,4041,255,120,120,"All";
-            Case 18:    callsub Job_Changing,4043,255,120,120,"All";
-            Case 19:    callsub Job_Changing,4042,255,120,120,"All";
-            Case 20:    callsub Job_Changing,4045,255,120,120,"All";
+            Case 1:    callsub Job_Changing,4024,99,70,120,"All";
+            Case 2:    callsub Job_Changing,4025,99,70,120,"All";
+            Case 3:    callsub Job_Changing,4026,99,70,120,"All";
+            Case 4:    callsub Job_Changing,4027,99,70,120,"All";
+            Case 5:    callsub Job_Changing,4028,99,70,120,"All";
+            Case 6:    callsub Job_Changing,4029,99,70,120,"All";
+            Case 7:    callsub Job_Changing,4030,99,70,120,"All";
+            Case 8:    callsub Job_Changing,4031,99,70,120,"All";
+            Case 9:    callsub Job_Changing,4032,99,70,120,"All";
+            Case 10:    callsub Job_Changing,4033,99,70,120,"All";
+            Case 11:    callsub Job_Changing,4034,99,70,120,"All";
+            Case 12:    callsub Job_Changing,4035,99,70,120,"All";
+            Case 13:    callsub Job_Changing,4037,99,70,120,"All";
+            Case 14:    callsub Job_Changing,4038,99,70,120,"All";
+            Case 15:    callsub Job_Changing,4039,99,70,120,"All";
+            Case 16:    callsub Job_Changing,4040,99,70,120,"All";
+            Case 17:    callsub Job_Changing,4041,99,70,120,"All";
+            Case 18:    callsub Job_Changing,4043,99,70,120,"All";
+            Case 19:    callsub Job_Changing,4042,99,70,120,"All";
+            Case 20:    callsub Job_Changing,4045,99,70,120,"All";
             Case 21:    goto Main_Menu;
         }
         
@@ -350,19 +350,19 @@ BabyThirdJob_Classes:
 
 // --- callsub Job_Changing,<JOB>,<BaseLv>,<JobLv>,<Skill>,<Announce>;    
             
-            Case 1:    callsub Job_Changing,4096,255,120,120,"All";
-            Case 2:    callsub Job_Changing,4097,255,120,120,"All";
-            Case 3:    callsub Job_Changing,4098,255,120,120,"All"; 
-            Case 4:    callsub Job_Changing,4099,255,120,120,"All";
-            Case 5:    callsub Job_Changing,4100,255,120,120,"All";
-            Case 6:    callsub Job_Changing,4101,255,120,120,"All";
-            Case 7:    callsub Job_Changing,4102,255,120,120,"All";
-            Case 8:    callsub Job_Changing,4103,255,120,120,"All";
-            Case 9:    callsub Job_Changing,4105,255,120,120,"All";
-            Case 10:    callsub Job_Changing,4104,255,120,120,"All";
-            Case 11:    callsub Job_Changing,4106,255,120,120,"All";
-            Case 12:    callsub Job_Changing,4107,255,120,120,"All";
-            Case 13:    callsub Job_Changing,4108,255,120,120,"All";
+            Case 1:    callsub Job_Changing,4096,99,70,120,"All";
+            Case 2:    callsub Job_Changing,4097,99,70,120,"All";
+            Case 3:    callsub Job_Changing,4098,99,70,120,"All"; 
+            Case 4:    callsub Job_Changing,4099,99,70,120,"All";
+            Case 5:    callsub Job_Changing,4100,99,70,120,"All";
+            Case 6:    callsub Job_Changing,4101,99,70,120,"All";
+            Case 7:    callsub Job_Changing,4102,99,70,120,"All";
+            Case 8:    callsub Job_Changing,4103,99,70,120,"All";
+            Case 9:    callsub Job_Changing,4105,99,70,120,"All";
+            Case 10:    callsub Job_Changing,4104,99,70,120,"All";
+            Case 11:    callsub Job_Changing,4106,99,70,120,"All";
+            Case 12:    callsub Job_Changing,4107,99,70,120,"All";
+            Case 13:    callsub Job_Changing,4108,99,70,120,"All";
             Case 14:    goto Main_Menu;
         }
 
