@@ -15,6 +15,11 @@
 //1161,67,50 //Balmung: No drop, No trade, No Guild Store (1+2+64 =67),
 //only groups of group-level 50 and up can override the setting.
 
+// Freebies - gahni
+7179,507,100
+7227,507,100
+20080,507,100
+
 // Wedding Related items
 2634,507,100	// Wedding Ring
 2635,507,100	// Wedding Ring
