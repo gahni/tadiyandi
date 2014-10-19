@@ -53,7 +53,7 @@ if(checkvending() >= 1 || checkchatting() == 1) {
 end;
 */
 
-OnTimer60000:
+OnTimer5000:
 set @minute, @minute + 1;
 //Check for 1 Minute
 if(@minute == 60){
