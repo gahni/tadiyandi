@@ -53,7 +53,7 @@ if(checkvending() >= 1 || checkchatting() == 1) {
 end;
 */
 
-OnTimer1000:
+OnTimer10000:
 set @minute, @minute + 1;
 //Check for 1 Minute
 if(@minute == 60){
@@ -67,10 +67,9 @@ if(@minute == 60){
 	getitem 20080, .@free3;
 	set zeny, zeny+rand(1,100);
 	//getitem 7959,100; 
-	dispbottom "You received TCG Cards by staying ingame for 1 hour";
+	dispbottom "You received TCG Cards, PODs, Credits and extra Zeny by staying ingame for every 10 minutes";
 	set @consecutive_hour, @consecutive_hour + 1;
 	}
-
 stopnpctimer;
 initnpctimer;
 end;
