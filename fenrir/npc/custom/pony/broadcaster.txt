@@ -11,7 +11,7 @@ prontera,165,172,4	script	Broadcaster	616,{
 	//NPC Headers Name:
 		set @header$,"[^0000ff" + @npcname$ + "^000000]";
 	//NPC COST PER Broadcast:
-		set @broadcastfee, 1000000;
+		set @broadcastfee, 100;
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 		mes @header$;
 		mes "Hi, I'm the Broadcaster";
@@ -32,7 +32,7 @@ prontera,165,172,4	script	Broadcaster	616,{
 				}
 			next;
 			mes @header$;
-			if(Zeny<1000000) goto $nozenybc;
+			if(Zeny<@broadcastfee) goto $nozenybc;
 			set Zeny,zeny - @broadcastfee;
 			mes "Please input your message.";
 			next;
