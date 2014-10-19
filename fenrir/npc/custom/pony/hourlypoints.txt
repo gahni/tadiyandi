@@ -27,7 +27,7 @@ attachnpctimer ""+strcharinfo(0)+"";
 initnpctimer;
 end;
 	
-OnTimer30000:
+/*OnTimer30000:
 //Check if Vending (normal or @at)
 if(checkvending() >= 1 || checkchatting() == 1) {
 	dispbottom "The Ragnarok Online hourly cash points event stopped because you were vending / chatting. Please relog if you wish to start again.";
@@ -51,6 +51,7 @@ if(checkvending() >= 1 || checkchatting() == 1) {
 //	end;
 //}
 end;
+*/
 
 OnTimer60000:
 set @minute, @minute + 1;
