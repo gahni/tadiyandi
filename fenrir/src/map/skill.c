@@ -6545,6 +6545,13 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 		if (flag&1 || (i = skill_get_splash(skill_id, skill_lv)) < 1)
 		{
 			clif_skill_nodamage(src,bl,skill_id,skill_lv,1);
+			// gahni
+			if (dstsd && dstsd->special_state.ignore_dispel)
+           			{
+                		if (sd)
+                    		clif_skill_fail(sd,skillid,0,0);
+                		break;
+            			}
 			if((dstsd && (dstsd->class_&MAPID_UPPERMASK) == MAPID_SOUL_LINKER)
 				|| (tsc && tsc->data[SC_SPIRIT] && tsc->data[SC_SPIRIT]->val2 == SL_ROGUE) //Rogue's spirit defends againt dispel.
 				|| rnd()%100 >= 50+10*skill_lv

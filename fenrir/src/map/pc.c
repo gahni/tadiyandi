@@ -2430,6 +2430,11 @@ int pc_bonus(struct map_session_data *sd,int type,int val)
 			if(sd->state.lr_flag != 2)
 				sd->special_state.no_sizefix = 1;
 			break;
+		// gahni
+		case SP_IGNOREDISPEL:
+        		if(sd->state.lr_flag != 2)
+			        sd->special_state.ignore_dispel = 1;
+        		break;
 		case SP_NO_MAGIC_DAMAGE:
 			if(sd->state.lr_flag == 2)
 				break;
