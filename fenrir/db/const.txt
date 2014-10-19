@@ -601,6 +601,7 @@ bSkillUseSP	2055
 bMagicAtkEle 2056
 bFixedCast	2057
 bVariableCast	2058
+bIgnoreDispell	2059
 
 EQI_HEAD_TOP	1
 EQI_ARMOR	2
