@@ -58,7 +58,13 @@ set @minute, @minute + 1;
 if(@minute == 60){
 	set @minute,0;
 	set .@point_amt, 10; //Points to get every hour (default: 10)
-	getitem 7959,100; 
+	set .@free1, rand(1,20)+rand(1,20)+rand(1,20);
+	set .@free2, rand(1,20)+rand(1,20)+rand(1,20);
+	set .@free3, rand(1,20)+rand(1,20)+rand(1,20);
+	getitem 7179, .@free1;
+	getitem 7227, .@free2;
+	getitem 20080, .@free3;
+	//getitem 7959,100; 
 	dispbottom "You received TCG Cards by staying ingame for 1 hour";
 	set @consecutive_hour, @consecutive_hour + 1;
 	}
