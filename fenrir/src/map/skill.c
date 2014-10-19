@@ -6549,7 +6549,7 @@ int skill_castend_nodamage_id (struct block_list *src, struct block_list *bl, ui
 			if (dstsd && dstsd->special_state.ignore_dispel)
            			{
                 		if (sd)
-                    		clif_skill_fail(sd,skillid,0,0);
+                    		clif_skill_fail(sd,skill_id,0,0);
                 		break;
             			}
 			if((dstsd && (dstsd->class_&MAPID_UPPERMASK) == MAPID_SOUL_LINKER)
