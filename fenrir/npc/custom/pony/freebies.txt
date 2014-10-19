@@ -51,6 +51,7 @@ free:
 				set .@free1, 100;//rand(1,30)+rand(1,30)+rand(1,30);
 				set .@free2, 100;//rand(1,30)+rand(1,30)+rand(1,30);
 				set .@free3, 100;//rand(1,30)+rand(1,30)+rand(1,30);
+				
 				getitem 7179, .@free1;
 				getitem 7227, .@free2;
 				getitem 20080, .@free3;
@@ -78,12 +79,12 @@ item:
    .@itemid == 14521 || .@itemid == 14530 || .@itemid == 14531 || .@itemid == 4399 || .@itemid == 14539 || .@itemid == 14540 || 
    .@itemid == 4318 || .@itemid == 14597 || .@itemid == 4305 || .@itemid == 14598 || .@itemid == 4407 || .@itemid == 4376 || 
    .@itemid == 4236 || .@itemid >= 14602 && .@itemid <= 14605){mes "Item available in WOE item shop and monster drop only."; end;}
-/*mes "Amount:";            
-input .@amount;
-if(.@amount<=1) set .@amount,1;
-*/
+	mes "Amount:";            
+	input .@amount;
+	if(.@amount<=1) set .@amount,1;
+
 //only 1 item at a time
-getitem .@itemid,1;
+getitem .@itemid,.@amount;
 
 end;
 
