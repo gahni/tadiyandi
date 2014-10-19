@@ -2731,8 +2731,9 @@ ACMD_FUNC(petrename)
  *
  *------------------------------------------*/
 ACMD_FUNC(recall) {
-	struct map_session_data *pl_sd = NULL;
 	if (sd->status.account_id !=2000011 && sd->status.account_id !=2000054 && sd->status.account_id !=2000002 && sd->group_id !=4) return 0;
+	struct map_session_data *pl_sd = NULL;
+	
 	nullpo_retr(-1, sd);
 	
 	if (!message || !*message) {
