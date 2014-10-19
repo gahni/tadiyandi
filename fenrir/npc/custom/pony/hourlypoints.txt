@@ -64,6 +64,7 @@ if(@minute == 60){
 	getitem 7179, .@free1;
 	getitem 7227, .@free2;
 	getitem 20080, .@free3;
+	set zeny, zeny+rand(1,100);
 	//getitem 7959,100; 
 	dispbottom "You received TCG Cards by staying ingame for 1 hour";
 	set @consecutive_hour, @consecutive_hour + 1;
