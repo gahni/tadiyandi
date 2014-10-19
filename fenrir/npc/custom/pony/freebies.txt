@@ -48,9 +48,9 @@ free:
 			//FreeON:
 				set lastTimeTalked,gettimetick(2);
 				//set freebon,1;
-				set .@free1, 100//rand(1,30)+rand(1,30)+rand(1,30);
-				set .@free2, 100//rand(1,30)+rand(1,30)+rand(1,30);
-				set .@free3, 100//rand(1,30)+rand(1,30)+rand(1,30);
+				set .@free1, 100;//rand(1,30)+rand(1,30)+rand(1,30);
+				set .@free2, 100;//rand(1,30)+rand(1,30)+rand(1,30);
+				set .@free3, 100;//rand(1,30)+rand(1,30)+rand(1,30);
 				getitem 7179, .@free1;
 				getitem 7227, .@free2;
 				getitem 20080, .@free3;
